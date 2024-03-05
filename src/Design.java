@@ -16,19 +16,19 @@ public class Design {
         {
             System.out.println(tax);
         }
-        else if (totalincome <= 37700)
+        else if (totalincome <= (12570 + 37700))
         {
             tax = (int) ((totalincome-12570) * 0.2);
             System.out.println(tax);
         }
         else if (totalincome <= 100000)
         {
-            tax = (int) (((37700-12570) * 0.2) + ((totalincome-(12570 + 37700)) * 0.4));
+            tax = (int) ((37700 * 0.2) + ((totalincome-(12570 + 37700)) * 0.4));
             System.out.println(tax);
         }
         else if (totalincome <= 125140)
         {
-            tax = (int) ((((12570 - ((totalincome- 100000)/2))+37700)*0.2) + ((totalincome-37700)*0.4));
+            tax = (int) ((37700*0.2) + ((totalincome-(37700 + (12570 - ((totalincome- 100000)/2))))*0.4));
             System.out.println(tax);
         }
         else if (totalincome > 125140)
