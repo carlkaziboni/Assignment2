@@ -7,10 +7,11 @@
  * Uses conditionals for each case of income tax
  */
 import static java.lang.Integer.parseInt;
+import static GetNumerical.GetNumerical.getincome;
 
 public class Design {
     public static void main(String[] args) {
-        int totalincome = parseInt(args[0]);
+        int totalincome = getincome();
         int tax = 0;
         if (totalincome <= 12570)
         {
