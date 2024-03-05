@@ -13,7 +13,7 @@ public class GetNumerical
         String income;
         boolean statusnumerical = false;
         boolean statusfilled = false;
-        System.out.print("Enter whole number income: ");
+        System.out.print("Enter whole positive number income: ");
         Scanner incomeinput = new Scanner(System.in);
         income = incomeinput.nextLine();
         while(!statusfilled || !statusnumerical)
@@ -38,7 +38,7 @@ public class GetNumerical
             {
                 break;
             }
-            System.out.print("Please enter income in correct form: ");
+            System.out.print("Please enter income in correct form (Whole positive number): ");
             incomeinput = new Scanner(System.in);
             income = incomeinput.nextLine();
         }
