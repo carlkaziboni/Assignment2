@@ -28,32 +28,35 @@ public class Design {
         int tax = 0;
         if (totalincome <= PERSONALALLOWANCE)
         {
-            System.out.println(tax);
+            printtax(tax);
         }
         else if (totalincome <= (PERSONALALLOWANCE + BANDONE))
         {
             tax = calculatebandone(totalincome);
-            System.out.println(tax);
+            printtax(tax);
         }
         else if (totalincome <= BANDTHREE)
         {
             tax = calculatebandtwo(totalincome);
-            System.out.println(tax);
+            printtax(tax);
         }
         else if (totalincome <= BANDFOUR)
         {
             tax = calculatebandthree(totalincome);
-            System.out.println(tax);
+            printtax(tax);
         }
         else if (totalincome > BANDFOUR)
         {
             tax = calculatebandfour(totalincome);
-            System.out.println(tax);
+            printtax(tax);
         }
         else
         {
             System.out.println("Inappropriate format for income");
         }
+    }
+    private static void printtax(int tax) {
+        System.out.println("Tax: " + tax);
     }
     //tax income bands
     private static final int PERSONALALLOWANCE = 12570;
