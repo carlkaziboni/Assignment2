@@ -1,3 +1,6 @@
+import java.lang.Integer;
+import GetNumerical.GetNumerical;
+
 /**
  * @author Carl Kaziboni
  * @version 2024-02-15
@@ -6,9 +9,6 @@
  * <p>
  * Uses conditionals for each case of income tax
  */
-import java.lang.Integer;
-import GetNumerical.GetNumerical;
-
 public class Design {
     //tax income bands
     private static final int PERSONAL_ALLOWANCE = 12570;
@@ -74,7 +74,10 @@ public class Design {
     }
 
 
-    //print tax
+    /**
+     * <p>This method prints out the tax calculated</p>
+     * @param tax the tax calculated
+     */
     private static void printTax(int tax) {
         System.out.println("Tax: " + tax);
     }
