@@ -1,10 +1,12 @@
 # Acknowledgements #
 
-- Name: TODO Your name
-- Student ID: TODO Your student ID
-- Tutorial group: TODO Your tutorial group
-- Tutor: TODO Your tutor's name
-- Date: TODO Today's date in ISO 8601 format YYYY-MM-DD
+- Name: Carl Kaziboni
+- Student ID: s2413182
+- Tutorial group: 2
+- Tutor: Andrey Demindenko
+- Date: 2024-03-07
+
+
 
 <STYLE>
 * { /* Don't leave any empty lines or IntelliJ might not render correctly */
