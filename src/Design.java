@@ -65,24 +65,28 @@ public class Design {
     private static final double taxrateone = 0.2;
     private static final double taxratetwo = 0.4;
     private static final double taxratethree = 0.45;
-    private static int calculatebandfour(int totalincome) {
+    private static int calculatebandfour(int totalincome)
+    {
         int tax;
-        tax = (int) ((BANDONE * taxrateone) + (BANDTWO * taxratetwo) + ((totalincome-(BANDONE+BANDTWO)) * taxratethree));
+        tax = (int) ((BANDONE * taxrateone) + (BANDTWO * taxratetwo) + ((totalincome - (BANDONE + BANDTWO)) * taxratethree));
         return tax;
     }
-    private static int calculatebandthree(int totalincome) {
+    private static int calculatebandthree(int totalincome)
+    {
         int tax;
-        tax = (int) ((BANDONE * taxrateone) + ((totalincome-(BANDONE + (PERSONALALLOWANCE - ((totalincome- BANDTHREE)/2)))) * taxratetwo));
+        tax = (int) ((BANDONE * taxrateone) + ((totalincome - (BANDONE + (PERSONALALLOWANCE - ((totalincome - BANDTHREE)/2)))) * taxratetwo));
         return tax;
     }
-    private static int calculatebandone(int totalincome) {
+    private static int calculatebandone(int totalincome)
+    {
         int tax;
-        tax = (int) ((totalincome-PERSONALALLOWANCE) * taxrateone);
+        tax = (int) ((totalincome - PERSONALALLOWANCE) * taxrateone);
         return tax;
     }
-    private static int calculatebandtwo(int totalincome) {
+    private static int calculatebandtwo(int totalincome)
+    {
         int tax;
-        tax = (int) ((BANDONE * taxrateone) + ((totalincome-(PERSONALALLOWANCE + BANDONE)) * taxratetwo));
+        tax = (int) ((BANDONE * taxrateone) + ((totalincome - (PERSONALALLOWANCE + BANDONE)) * taxratetwo));
         return tax;
     }
 }
