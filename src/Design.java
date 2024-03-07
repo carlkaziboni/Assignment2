@@ -75,12 +75,21 @@ public class Design {
 
 
     /**
-     * <p>This method prints out the tax calculated</p>
+     * <p>
+     *This method prints out the tax calculate
+     </p>
      * @param tax the tax calculated
      */
     private static void printTax(int tax) {
         System.out.println("Tax: " + tax);
     }
+    /**
+     * <p>
+     * This method calculates the tax for salaries in band one
+     * </p>
+     * @param totalincome
+     * @return tax
+     */
     private static int calculateBandOne(int totalincome)
     {
         int tax;
@@ -88,6 +97,13 @@ public class Design {
         tax = (int) ((totalincome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);
         return tax;
     }
+    /**
+     * <p>
+     * This method caclulates the tax for salaries in band two
+     * </p>
+     * @param totalincome
+     * @return tax
+     */
     private static int calculateBandTwo(int totalincome)
     {
         int tax;
@@ -95,6 +111,13 @@ public class Design {
         tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (PERSONAL_ALLOWANCE + BAND_ONE)) * TAX_RATE_TWO));
         return tax;
     }
+    /**
+     * <p>
+     * This method calculates the tax for salaries in band three
+     * </p>
+     * @param totalincome
+     * @return tax
+     */
     private static int calculateBandThree(int totalincome)
     {
         int tax;
@@ -102,6 +125,13 @@ public class Design {
         tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalincome - BAND_THREE)/2)))) * TAX_RATE_TWO));
         return tax;
     }
+    /**
+     * <p>
+     * This method calculates the tax for salaries in band four
+     * </p>
+     * @param totalincome
+     * @return tax
+     */
     private static int calculateBandFour(int totalincome)
     {
         int tax;
