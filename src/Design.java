@@ -1,9 +1,11 @@
 import java.lang.Integer;
-import GetNumerical.GetNumerical;
+import java.lang.Character;
+import java.lang.String;
+import java.util.Scanner;
 
 /**
  * @author Carl Kaziboni
- * @version 2024-02-15
+ * @version 2024-03-07
  * <p>
  * Class to calculate income tax.
  * <p>
@@ -23,14 +25,15 @@ public class Design {
     public static void main(String[] args)
     {
         int totalincome = 0;
-        //Get input from user using special getincome from GetNumerical Package
-        String input = GetNumerical.getincome();
+        //Get input from user
+        String input = GetNumerical.getIncome();
         //make sure input is integer
         try
         {
             totalincome = Integer.parseInt(input);
         }
-        catch (NumberFormatException exception) {
+        catch (NumberFormatException exception)
+        {
             System.err.printf("%s not positive whole number i.e. '5000'%n", input);
             System.exit(1);
         }
@@ -38,7 +41,10 @@ public class Design {
         {
             System.out.println("Income: " + totalincome);
         }
+
+        //start calculating tax
         int tax = 0;
+        //Non-taxable income
         if (totalincome <= PERSONAL_ALLOWANCE)
         {
             printTax(tax);
@@ -67,6 +73,7 @@ public class Design {
             tax = calculateBandFour(totalincome);
             printTax(tax);
         }
+        //If all checks were bypassed
         else
         {
             System.out.println("Inappropriate format for income");
@@ -74,21 +81,36 @@ public class Design {
     }
 
 
+    //Supporting methods
     /**
      * <p>
-     *This method prints out the tax calculate
-     </p>
-     * @param tax the tax calculated
+     * This method prints out the tax calculated to console
+     * </p>
+     *
+     * @param tax An integer of tax calculated
+     * <p>
+     * Example of usage of printTax
+     * </p>
+     * <pre>
+     * {@code
+     * int tax = 100;
+     * printTax(tax);
+     * }
+     * </pre>
+     * <p>
+     * This prints "Tax: 100" to console
+     * </p>
      */
-    private static void printTax(int tax) {
+    private static void printTax(int tax)
+    {
         System.out.println("Tax: " + tax);
     }
     /**
      * <p>
      * This method calculates the tax for salaries in band one
      * </p>
-     * @param totalincome
-     * @return tax
+     * @param totalincome An integer of total income
+     * @return tax calculated
      */
     private static int calculateBandOne(int totalincome)
     {
@@ -101,8 +123,8 @@ public class Design {
      * <p>
      * This method caclulates the tax for salaries in band two
      * </p>
-     * @param totalincome
-     * @return tax
+     * @param totalincome An integer of total income
+     * @return tax calculated
      */
     private static int calculateBandTwo(int totalincome)
     {
@@ -115,8 +137,8 @@ public class Design {
      * <p>
      * This method calculates the tax for salaries in band three
      * </p>
-     * @param totalincome
-     * @return tax
+     * @param totalincome An integer of total income
+     * @return tax calculated
      */
     private static int calculateBandThree(int totalincome)
     {
@@ -129,8 +151,8 @@ public class Design {
      * <p>
      * This method calculates the tax for salaries in band four
      * </p>
-     * @param totalincome
-     * @return tax
+     * @param totalincome An integer of total income
+     * @return tax calculated
      */
     private static int calculateBandFour(int totalincome)
     {
@@ -138,5 +160,63 @@ public class Design {
         //Calculate tax at 20% for first 37700 and next 99730 at 40% and the rest of income at 45%.
         tax = (int) ((BAND_ONE * TAX_RATE_ONE) + (BAND_TWO * TAX_RATE_TWO) + ((totalincome - (BAND_ONE + BAND_TWO)) * TAX_RATE_THREE));
         return tax;
+    }
+}
+
+
+/**
+ * @author Carl Kaziboni
+ * @version 2024-03-07
+ * <p>
+ * Class to get integer input.
+ * <p>
+ * Contains getIncome used to obtain integer input from user
+ */
+class GetNumerical
+{
+    /**
+     * <p>
+     * This method gets input from user
+     * </p>
+     * @return String made up of integers only
+     */
+    public static String getIncome()
+    {
+        String income;
+        boolean allNumericalInput = false;
+        boolean notEmptyInput = false;
+        System.out.print("Enter whole positive number income: ");
+        Scanner incomeInput = new Scanner(System.in);
+        //read input obtained
+        income = incomeInput.nextLine();
+        //Keep prompting for input till input is correctly given
+        while(!notEmptyInput || !allNumericalInput)
+        {
+            notEmptyInput = false;
+            allNumericalInput = false;
+            if (!income.isEmpty())
+            {
+                notEmptyInput = true;
+
+                for (int i = 0; i < income.length(); i++)
+                {
+                    if (!Character.isDigit(income.charAt(i)))
+                    {
+                        notEmptyInput = false;
+                        break;
+                    }
+                    allNumericalInput = true;
+                }
+            }
+            //all constraints satisfied
+            if (notEmptyInput && allNumericalInput)
+            {
+                break;
+            }
+            System.out.print("Please enter income in correct form (Whole positive number): ");
+            incomeInput = new Scanner(System.in);
+            income = incomeInput.nextLine();
+        }
+        return income;
     }
 }
