@@ -6,12 +6,25 @@
  * <p>
  * Uses conditionals for each case of income tax
  */
-import static java.lang.Integer.parseInt;
-import static GetNumerical.GetNumerical.getincome;
+import java.lang.Integer;
+
+import GetNumerical.GetNumerical;
 
 public class Design {
     public static void main(String[] args) {
-        int totalincome = getincome();
+        int totalincome = 0;
+        String input = GetNumerical.getincome();
+        try
+        {
+            totalincome = Integer.parseInt(input);
+        }
+        catch (NumberFormatException exception) {
+            System.err.printf("%s not positive whole number i.e. '5000'\n", input);
+        }
+        finally
+        {
+            System.out.println("Income: " + totalincome);
+        }
         int tax = 0;
         if (totalincome <= 12570)
         {

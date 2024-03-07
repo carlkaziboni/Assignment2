@@ -1,14 +1,12 @@
 package GetNumerical;
 
-import static java.lang.Integer.parseInt;
-
 import java.lang.Character;
 import java.lang.String;
 import java.util.Scanner;
 
 public class GetNumerical
 {
-    public static int getincome()
+    public static String getincome()
     {
         String income;
         boolean statusnumerical = false;
@@ -42,6 +40,6 @@ public class GetNumerical
             incomeinput = new Scanner(System.in);
             income = incomeinput.nextLine();
         }
-        return parseInt(income);
+        return income;
     }
 }
