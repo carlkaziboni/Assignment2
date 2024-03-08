@@ -1,18 +1,23 @@
-- Name: TODO Your name
-- Student ID: TODO Your student ID
-- Tutorial group: TODO Your tutorial group
-- Tutor: TODO Your tutor's name
-- Date: TODO Today's date in ISO 8601 format YYYY-MM-DD
+- Name: Carl Kaziboni
+- Student ID: s2413182
+- Tutorial group: 2
+- Tutor: Andrey Demindenko
+- Date: 2024-03-08
 
-# TODO Rename this heading to identify the challenge #
+# Calculate My Income Tax #
 
 # Target audience #
 
-TODO define your target audience
+- *Beginners* in Object Oriented Programming and Java taking INF1B. They must have a few weeks of programming experience in Java.
 
 # Prerequisite knowledge #
 
-TODO outline what the target audience needs to know before starting.
+<ul class ="custom">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 
 # Learning outcomes #
 
@@ -100,4 +105,7 @@ h2 { /* Put a horizontal line above major headings to assist screen viewing */
   margin-top:  80px;
   padding-top: 20px;
   }
+.custom {
+  list-style-type: circle;
+}
 </STYLE>
