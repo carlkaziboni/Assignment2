@@ -70,7 +70,7 @@ The actual questions are in
 ### Level of Work ###
 - I feel like my work is above an A2 Level of work. I used mulitple skills to a high level in each part of my assignment, i.e. part of my Javadoc used examples to show how the function worked, my markdown used a lot of extended syntax like footnotes and some custom styling added in it. The worksheet is engaging through humor and easy to understand. Its clarity and engagement would make it attractive to students.
 ### Usefulness ###
-- The use of examples, diagrams, and pseudocode enhances the overall understanding. The glossary and references add value by providing resources for deeper exploration. The footnotes make it easy to navigate to the glossary and search up definitions in the table.
+- The use of examples, diagrams, and pseudocode enhances the overall understanding. The glossary and references add value by providing resources for deeper exploration. The footnotes make it easy to navigate to the glossary and search up definitions in the table. The questions at the end make the worksheet more engaging and reinforce the key concepts learnt.
 <STYLE>
 * {
   font-size:   1.2rem;

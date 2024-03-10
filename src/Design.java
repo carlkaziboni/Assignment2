@@ -24,13 +24,13 @@ public class Design {
     private static final double TAX_RATE_THREE = 0.45;
     public static void main(String[] args)
     {
-        int totalincome = 0;
+        int totalIncome = 0;
         //Get input from user
         String input = GetNumerical.getIncome();
         //make sure input is integer
         try
         {
-            totalincome = Integer.parseInt(input);
+            totalIncome = Integer.parseInt(input);
         }
         catch (NumberFormatException exception)
         {
@@ -39,38 +39,38 @@ public class Design {
         }
         finally
         {
-            System.out.println("Income: " + totalincome);
+            System.out.println("Income: " + totalIncome);
         }
 
         //start calculating tax
         int tax = 0;
         //Non-taxable income
-        if (totalincome <= PERSONAL_ALLOWANCE)
+        if (totalIncome <= PERSONAL_ALLOWANCE)
         {
             printTax(tax);
         }
         //First 37700 after personal allowance taxed at 20%
-        else if (totalincome <= (PERSONAL_ALLOWANCE + BAND_ONE))
+        else if (totalIncome <= (PERSONAL_ALLOWANCE + BAND_ONE))
         {
-            tax = calculateBandOne(totalincome);
+            tax = calculateBandOne(totalIncome);
             printTax(tax);
         }
         //First 37700 after personal allowance taxed at 20% then rest of income up to 100000 taxed at 40%
-        else if (totalincome <= BAND_THREE)
+        else if (totalIncome <= BAND_THREE)
         {
-            tax = calculateBandTwo(totalincome);
+            tax = calculateBandTwo(totalIncome);
             printTax(tax);
         }
         //First 37700 after personal allowance taxed then rest of income taxed at 40% however after 100000 every 2 pound reduced personal allowance by 1 pound
-        else if (totalincome <= BAND_FOUR)
+        else if (totalIncome <= BAND_FOUR)
         {
-            tax = calculateBandThree(totalincome);
+            tax = calculateBandThree(totalIncome);
             printTax(tax);
         }
         //First 37700 taxed at 20% then next 99730 taxed at 40% then rest of income taxed 45%
-        else if (totalincome > BAND_FOUR)
+        else if (totalIncome > BAND_FOUR)
         {
-            tax = calculateBandFour(totalincome);
+            tax = calculateBandFour(totalIncome);
             printTax(tax);
         }
         //If all checks were bypassed
@@ -109,56 +109,56 @@ public class Design {
      * <p>
      * This method calculates the tax for salaries in band one
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandOne(int totalincome)
+    private static int calculateBandOne(int totalIncome)
     {
         int tax;
         //Calculate tax at 20%  for first 37700 after personal allowance 
-        tax = (int) ((totalincome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);
+        tax = (int) ((totalIncome - PERSONAL_ALLOWANCE) * TAX_RATE_ONE);
         return tax;
     }
     /**
      * <p>
      * This method caclulates the tax for salaries in band two
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandTwo(int totalincome)
+    private static int calculateBandTwo(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 after personal allowance and remainder (as long as below or equal to 100000) at 40%.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (PERSONAL_ALLOWANCE + BAND_ONE)) * TAX_RATE_TWO));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalIncome - (PERSONAL_ALLOWANCE + BAND_ONE)) * TAX_RATE_TWO));
         return tax;
     }
     /**
      * <p>
      * This method calculates the tax for salaries in band three
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandThree(int totalincome)
+    private static int calculateBandThree(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 after personal allowance and next 99730 at 40%. For every 2 pounds over 100000 1 pound is taken from personal allowance.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalincome - BAND_THREE) / 2)))) * TAX_RATE_TWO));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalIncome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalIncome - BAND_THREE) / 2)))) * TAX_RATE_TWO));
         return tax;
     }
     /**
      * <p>
      * This method calculates the tax for salaries in band four
      * </p>
-     * @param totalincome An integer of total income
+     * @param totalIncome An integer of total income
      * @return tax calculated
      */
-    private static int calculateBandFour(int totalincome)
+    private static int calculateBandFour(int totalIncome)
     {
         int tax;
         //Calculate tax at 20% for first 37700 and next 99730 at 40% and the rest of income at 45%.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + (BAND_TWO * TAX_RATE_TWO) + ((totalincome - (BAND_ONE + BAND_TWO)) * TAX_RATE_THREE));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + (BAND_TWO * TAX_RATE_TWO) + ((totalIncome - (BAND_ONE + BAND_TWO)) * TAX_RATE_THREE));
         return tax;
     }
 }
