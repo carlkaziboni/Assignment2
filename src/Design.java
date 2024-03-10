@@ -76,7 +76,7 @@ public class Design {
         //If all checks were bypassed
         else
         {
-            System.out.println("Inappropriate format for income");
+            System.err.println("Inappropriate format for income");
         }
     }
 
