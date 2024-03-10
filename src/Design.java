@@ -144,7 +144,7 @@ public class Design {
     {
         int tax;
         //Calculate tax at 20% for first 37700 after personal allowance and next 99730 at 40%. For every 2 pounds over 100000 1 pound is taken from personal allowance.
-        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalincome - BAND_THREE)/2)))) * TAX_RATE_TWO));
+        tax = (int) ((BAND_ONE * TAX_RATE_ONE) + ((totalincome - (BAND_ONE + (PERSONAL_ALLOWANCE - ((totalincome - BAND_THREE) / 2)))) * TAX_RATE_TWO));
         return tax;
     }
     /**

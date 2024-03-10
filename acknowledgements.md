@@ -15,26 +15,26 @@
 | Charlotte Baker | Classmate | Helped with Javadoc writing for Design and GetNumerical classes, as well as for functions in each of the functions |
 | Andrey Demindenko | Tutor | Gave advice on how to modularize code |
 | Fiona Mcneill | Lecturer | Explained how Scanner class works and how to use it to get input |
-| [Code golf answer in C](https://codegolf.stackexchange.com/a/256253) | Code golf answer | Inspire on how to calucate taxes for each band |
+| [Code golf answer in C](https://codegolf.stackexchange.com/a/256253 "Link to Code Golf attempt in C") | Code golf answer | Inspire on how to calucate taxes for each band |
 
 ## Tools ##
 | Tool | Category | Help |
 | ---- | -------- | ---- |
-| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Accessibility | Check colors contrast to make easier to view and more accessible |
-| [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)| Accessiblity | Simulate color blindness in order to see if everything is accessible |
-| [IntelliJ Markdown Previewer](https://www.jetbrains.com/help/idea/markdown.html#preview) | Markdown Writing | Preview Markdown as it was being written |
-| [IntelliJ IDEA](https://www.jetbrains.com/idea/) | Programming | Write all code and markdown |
+| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/ "Link to WEBAIM Contrast Checker") | Accessibility | Check colors contrast to make easier to view and more accessible |
+| [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/ "Link to Color Blindness Siumlator")| Accessiblity | Simulate color blindness in order to see if everything is accessible |
+| [IntelliJ Markdown Previewer](https://www.jetbrains.com/help/idea/markdown.html#preview "Link to IntelliJ Markdown Previewer") | Markdown Writing | Preview Markdown as it was being written |
+| [IntelliJ IDEA](https://www.jetbrains.com/idea/ "Link to IntelliJ IDEA website") | Programming | Write all code and markdown |
 
 ## Sources ##
 | Source | Category | Help |
 | ------ | -------- | ---- |
-| [StackOverflow Blank Line Check](https://stackoverflow.com/q/7320315) | Code | Helped to see how to test for a blank input in Java |
-| [Oracle Javadoc Technical Article](https://www.oracle.com/uk/technical-resources/articles/java/javadoc-tool.html) | Code | Find how to write Javadoc in code |
-| [Baeldung Javadoc](https://www.baeldung.com/javadoc) | Code | See examples of how to write Javadoc |
+| [StackOverflow Blank Line Check](https://stackoverflow.com/q/7320315 "Link to StackOverflow Blank Line answer") | Code | Helped to see how to test for a blank input in Java |
+| [Oracle Javadoc Technical Article](https://www.oracle.com/uk/technical-resources/articles/java/javadoc-tool.html "Link to Oracle Javadoc article") | Code | Find how to write Javadoc in code |
+| [Baeldung Javadoc](https://www.baeldung.com/javadoc "Link to Examples of writing Javadoc") | Code | See examples of how to write Javadoc |
 | Lecture 5: Classes and Objects | Code | Where how to design and make classes and objects was shown |
-| [Github Markdown Cheatsheet](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | Markdwon | Showed basic markdown syntax |
+| [Github Markdown Cheatsheet](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax "Link To Github markdown cheetsheat") | Markdown | Showed basic markdown syntax |
 | [Markdown Documentation](https://www.markdownguide.org/) | Markdown | Show how to write more advanced markdown |
-| [Java Documentation](https://docs.oracle.com/en/java/javase/21/docs/api/index.html) | Code | Find functions for various uses in Design.Java |
+| [Java Documentation](https://docs.oracle.com/en/java/javase/21/docs/api/index.html "Link to Java Documentation") | Code | Find functions for various uses in Design.Java |
 
 <STYLE>
 * {
